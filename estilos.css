@@ -1,0 +1,397 @@
+*{
+    margin:0;
+
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.parte1{
+    width: 100%;
+    height: 90vh;
+    background: linear-gradient(135deg, #482B84 0%, #A16ADE 100%);
+    text-align: center;
+    color: white;
+    padding: 150px;
+    position: relative;
+}
+.parte1 h1{
+    font-size: 55px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 15px;
+}
+.parte1 p{
+    font-size: 23px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 40px;
+}
+.btn1{
+    width: 200px;
+    height: 50px;
+    color: white;
+    background-color: black;
+    font-size: 16px;
+    font-weight: bold;
+}
+.btn1:hover{
+    /* box-shadow: 0 8px 16px rgba(255, 255, 255, 0.4); */
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+
+
+.cuadro1, .cuadro2, .cuadro3{
+    width: 270px;
+    height: 160px;
+    color: white;
+    background-color: #3A3A3A;
+    padding: 20px;
+}
+.cuadros h3{
+    color: #CD9EF7;
+    font-weight: normal;
+    text-align: center;
+    font-size: 40px;
+}
+/* .cuadros{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 35px;
+} */
+
+.cuadros {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 35px;
+    position: absolute;
+    top: 82vh; 
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    width: 100%;
+}
+.cuadro1:hover, .cuadro2:hover, .cuadro3:hover {
+    transform: scale(1.05);
+
+}
+
+.parte2{
+    width: 100%;
+    height: 90vh;
+    background-color: #1A1A1A;
+    color: #D4D4D4;
+    position: relative; 
+}
+.texto1{
+    width: 30%;
+    font-size: 20px;
+    position: absolute;
+    bottom: 100px;
+    left: 250px;
+}
+.texto1 h1{
+    font-size: 40px;
+    font-weight: normal;
+}
+.texto1 a{
+    color:#CD9EF7;
+    text-decoration:none;
+    font-size: 15px;
+}
+.img2{
+    width: 480px;
+    height: 330px;
+    position: absolute;
+    right: 250px;
+    bottom: 100px;
+
+}
+
+
+
+
+
+
+.parte3 {
+    width: 100%;
+    height: 120vh;
+    background-color: #202020;
+    color: #D4D4D4;
+
+    text-align: center;
+
+}
+
+.parte3 .titulo {
+    font-size: 37px;
+    font-weight: normal;
+    padding-top: 120px;
+    padding-bottom: 100px;
+}
+
+
+.cuadroStripe {
+    width: 450px;
+    height: 500px;
+    display: inline-block;
+    margin-right:50px;
+}
+.cuadroGit {
+    width: 450px;
+    height: 500px;
+    
+    display: inline-block;
+    margin-left: 50px;
+}
+
+.gris {
+    background-color: #3A3A3A;
+    padding: 40px;
+    text-align: left;
+}
+
+.gris h1 {
+    font-size: 28px;
+    margin-bottom: 0;
+    text-align: center;
+    color:#CD9EF7;
+}
+
+.morado {
+    background-color: #7239B3;
+    padding: 30px;
+    text-align: center;
+    color: white;
+}
+
+.impo {
+    font-size: 35px;
+    margin: 20px 0;
+}
+
+.gris li {
+    font-size: 18px;
+}
+
+.parte3 a{
+    text-decoration: none;
+    color:#CD9EF7;
+}
+
+
+
+
+
+/* Tablets y pantallas medianas (768px - 1024px) */
+@media (max-width: 1024px) {
+    .parte1 {
+        padding: 100px 50px;
+    }
+    
+    .parte1 h1 {
+        font-size: 45px;
+    }
+    
+    .parte1 p {
+        font-size: 20px;
+        margin: 30px;
+    }
+    
+    .cuadros {
+        flex-wrap: wrap;
+        top: 75vh;
+        gap: 20px;
+    }
+    
+    .cuadro1, .cuadro2, .cuadro3 {
+        width: 230px;
+        height: 150px;
+    }
+    
+    .parte2 {
+        height: auto;
+        padding: 100px 0;
+    }
+    
+    .texto1 {
+        width: 45%;
+        left: 50px;
+        font-size: 18px;
+    }
+    
+    .texto1 h1 {
+        font-size: 35px;
+    }
+    
+    .img2 {
+        width: 400px;
+        height: 280px;
+        right: 50px;
+    }
+    
+    .cuadroStripe, .cuadroGit {
+        width: 400px;
+        height: 480px;
+        margin: 20px;
+    }
+}
+
+/* Tablets pequeñas (481px - 768px) */
+@media (max-width: 768px) {
+    .parte1 {
+        height: auto;
+        padding: 80px 30px;
+    }
+    
+    .parte1 h1 {
+        font-size: 35px;
+        margin-top: 10px;
+    }
+    
+    .parte1 p {
+        font-size: 18px;
+        margin: 20px;
+    }
+    
+    .imgCarro {
+        width: 100px;
+    }
+    
+    .cuadros {
+        flex-direction: column;
+        position: static;
+        transform: none;
+        margin-top: 50px;
+        padding: 20px;
+    }
+    
+    .cuadro1, .cuadro2, .cuadro3 {
+        width: 90%;
+        max-width: 400px;
+        height: auto;
+        padding: 30px;
+    }
+    
+    .parte2 {
+        height: auto;
+        padding: 80px 20px;
+    }
+    
+    .texto1 {
+        width: 90%;
+        position: static;
+        margin: 0 auto 50px;
+        font-size: 16px;
+    }
+    
+    .texto1 h1 {
+        font-size: 30px;
+    }
+    
+    .img2 {
+        width: 90%;
+        height: auto;
+        position: static;
+        margin: 0 auto;
+        display: block;
+    }
+    
+    .parte3 {
+        height: auto;
+        padding: 50px 20px;
+    }
+    
+    .parte3 .titulo {
+        font-size: 30px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    
+    .cuadroStripe, .cuadroGit {
+        width: 90%;
+        max-width: 450px;
+        height: auto;
+        display: block;
+        margin: 30px auto;
+    }
+}
+
+/* Móviles (max-width: 480px) */
+@media (max-width: 480px) {
+    .parte1 {
+        padding: 60px 20px;
+    }
+    
+    .parte1 h1 {
+        font-size: 28px;
+    }
+    
+    .parte1 p {
+        font-size: 16px;
+        margin: 15px;
+    }
+    
+    .btn1 {
+        width: 180px;
+        height: 45px;
+        font-size: 14px;
+    }
+    
+    .imgCarro {
+        width: 80px;
+    }
+    
+    .cuadro1, .cuadro2, .cuadro3 {
+        width: 100%;
+        padding: 25px 15px;
+    }
+    
+    .cuadros h3 {
+        font-size: 30px;
+    }
+    
+    .texto1 {
+        width: 95%;
+        font-size: 15px;
+    }
+    
+    .texto1 h1 {
+        font-size: 25px;
+    }
+    
+    .lista li {
+        font-size: 14px;
+    }
+    
+    .parte3 .titulo {
+        font-size: 24px;
+        padding: 40px 10px;
+    }
+    
+    .cuadroStripe, .cuadroGit {
+        width: 100%;
+        margin: 20px auto;
+    }
+    
+    .gris {
+        padding: 25px 15px;
+    }
+    
+    .gris h1 {
+        font-size: 24px;
+    }
+    
+    .morado {
+        padding: 20px 15px;
+    }
+    
+    .impo {
+        font-size: 28px;
+    }
+    
+    .gris li {
+        font-size: 16px;
+    }
+}
