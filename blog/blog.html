@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>elementary Blog</title>
+    <link rel="stylesheet" href="blog.css" />
+    <style></style>
+  </head>
+  <body>
+    <!-- Top Navigation -->
+    <nav class="top-nav">
+      <div class="top-nav-content">
+        <a href="#" class="logo">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <circle
+              cx="12"
+              cy="12"
+              r="10"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            />
+            <path
+              d="M7 12 Q12 7, 17 12"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            />
+          </svg>
+        </a>
+        <ul class="top-nav-links">
+          <li><a href="#">Support</a></li>
+          <li><a href="#">Developer</a></li>
+          <li><a href="#">Get Involved</a></li>
+          <li><a href="#">Store</a></li>
+          <li><a href="#">Blog</a></li>
+        </ul>
+        <div class="social-icons">
+          <a href="#">📰</a>
+          <a href="#">📺</a>
+          <a href="#">💬</a>
+          <a href="#">💰</a>
+          <a href="#">🎮</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Secondary Navigation -->
+    <nav class="secondary-nav">
+      <div class="secondary-nav-content">
+        <a href="#">OS Updates</a>
+        <a href="#">AppCenter</a>
+        <a href="#">Developers</a>
+        <a href="#">Design</a>
+        <div class="search-box">
+          <input type="text" placeholder="Search Posts..." />
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-card">
+        <div class="hero-image">
+          <div class="monitor-graphic">
+            <div
+              style="
+                background: #f5f5f5;
+                border-radius: 4px;
+                padding: 15px;
+                margin-bottom: 10px;
+              "
+            >
+              <div
+                style="
+                  font-size: 12px;
+                  font-weight: 600;
+                  color: #333;
+                  margin-bottom: 8px;
+                "
+              >
+                Memory
+              </div>
+              <div
+                style="
+                  display: flex;
+                  gap: 10px;
+                  align-items: center;
+                  margin-bottom: 15px;
+                "
+              >
+                <div style="font-size: 24px; font-weight: 700; color: #333">
+                  28%
+                </div>
+                <div style="font-size: 11px; color: #666">
+                  <div>USED: 14.4 GiB</div>
+                  <div>15.4 GiB</div>
+                </div>
+                <div style="font-size: 11px; color: #666">
+                  <div>SHARED: 375.2 MiB</div>
+                  <div>375.2 MiB</div>
+                </div>
+                <div style="font-size: 11px; color: #666">
+                  <div>CACHED: 4.1 GiB</div>
+                  <div>0 bytes</div>
+                </div>
+              </div>
+              <div
+                style="
+                  height: 30px;
+                  background: linear-gradient(
+                    to right,
+                    #c6f4d6 28%,
+                    #f5f5f5 28%
+                  );
+                  border-radius: 3px;
+                "
+              ></div>
+            </div>
+            <div
+              style="
+                background: #f5f5f5;
+                border-radius: 4px;
+                padding: 15px;
+                margin-bottom: 10px;
+              "
+            >
+              <div
+                style="
+                  font-size: 12px;
+                  font-weight: 600;
+                  color: #333;
+                  margin-bottom: 10px;
+                "
+              >
+                Network
+              </div>
+              <div style="display: flex; gap: 10px; margin-bottom: 10px">
+                <span
+                  style="
+                    background: #64baff;
+                    color: white;
+                    padding: 3px 8px;
+                    border-radius: 3px;
+                    font-size: 11px;
+                  "
+                  >308.8 KiB/s</span
+                >
+                <span
+                  style="
+                    background: #68b723;
+                    color: white;
+                    padding: 3px 8px;
+                    border-radius: 3px;
+                    font-size: 11px;
+                  "
+                  >9.9 KiB/s</span
+                >
+              </div>
+              <div style="height: 60px; position: relative">
+                <svg width="100%" height="100%" style="display: block">
+                  <polyline
+                    points="0,50 20,45 40,48 60,40 80,55 100,30 120,35 140,25 160,20 180,40 200,35"
+                    fill="none"
+                    stroke="#64baff"
+                    stroke-width="2"
+                  />
+                </svg>
+              </div>
+            </div>
+            <div style="background: #f5f5f5; border-radius: 4px; padding: 15px">
+              <div
+                style="
+                  font-size: 12px;
+                  font-weight: 600;
+                  color: #333;
+                  margin-bottom: 8px;
+                "
+              >
+                Storage
+              </div>
+              <div style="display: flex; gap: 15px">
+                <div style="flex: 1">
+                  <div style="font-size: 11px; font-weight: 600; color: #333">
+                    Star Drive SATA SSD
+                  </div>
+                  <div style="font-size: 10px; color: #666">
+                    /dev/sda - 172.6 GiB / 223.6 GiB
+                  </div>
+                </div>
+                <div style="flex: 1">
+                  <div style="font-size: 11px; font-weight: 600; color: #333">
+                    STORAGE DEVICE
+                  </div>
+                  <div style="font-size: 10px; color: #666">
+                    /dev/sdb - 1Tb 4.2 GiB
+                  </div>
+                  <div style="font-size: 10px; color: #666">not mounted</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="hero-content">
+          <h1 class="hero-title">Who Monitors The Monitor?</h1>
+          <p class="hero-subtitle">Updates for OS 8 and Early Access</p>
+          <div class="author-info">
+            <div class="author-avatar"></div>
+            <div class="author-details">
+              <div class="author-name">Danielle Foré</div>
+              <div class="post-meta">Wed, Nov 5, 2025 · 5 min read</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Posts -->
+    <section class="featured-posts">
+      <div class="post-card">
+        <div class="post-thumbnail">
+          <img
+            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect fill='%233a3a3a' width='400' height='300'/%3E%3C/svg%3E"
+            alt="Map"
+          />
+        </div>
+        <div class="post-content">
+          <h3 class="post-title">More Apps, More Features, More Cowbell!</h3>
+          <p class="post-description">Updates for OS 8 and Early Access</p>
+          <div class="author-info">
+            <div class="author-avatar"></div>
+            <div class="author-details">
+              <div class="author-name">Danielle Foré</div>
+              <div class="post-meta">Mon, Oct 6, 2025 · 8 min read</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="post-card">
+        <div
+          class="post-thumbnail"
+          style="
+            background: linear-gradient(135deg, #87ceeb, #98d8c8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 120px;
+            color: white;
+            font-weight: 900;
+          "
+        >
+          8.0.2
+        </div>
+        <div class="post-content">
+          <h3 class="post-title">elementary OS 8.0.2 Available Now</h3>
+          <p class="post-description">More reliable and accessible than ever</p>
+          <div class="author-info">
+            <div class="author-avatar"></div>
+            <div class="author-details">
+              <div class="author-name">Danielle Foré</div>
+              <div class="post-meta">Mon, Sep 22, 2025 · 4 min read</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="post-card">
+        <div class="post-thumbnail">
+          <img
+            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect fill='%233a3a3a' width='400' height='300'/%3E%3C/svg%3E"
+            alt="Desktop"
+          />
+        </div>
+        <div class="post-content">
+          <h3 class="post-title">
+            Developer Tools, Hardware Enablement, and Multitasking Futures
+          </h3>
+          <p class="post-description">Updates for OS 8 and Early Access</p>
+          <div class="author-info">
+            <div class="author-avatar"></div>
+            <div class="author-details">
+              <div class="author-name">Danielle Foré</div>
+              <div class="post-meta">Mon, Aug 11, 2025 · 7 min read</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- More Stories -->
+    <section class="more-stories">
+      <h2 class="section-title">More Stories</h2>
+      <div class="stories-grid">
+        <div class="story-card">
+          <div class="story-image gradient-bg-1">
+            <svg width="200" height="200" viewBox="0 0 100 100" fill="none">
+              <circle cx="50" cy="50" r="35" stroke="white" stroke-width="4" />
+              <path
+                d="M25 50 Q40 30, 50 50 Q60 70, 75 50"
+                stroke="white"
+                stroke-width="4"
+                fill="none"
+              />
+            </svg>
+          </div>
+          <div class="story-content">
+            <h3 class="story-title">
+              Supporting Disability Is Our Social Responsibility
+            </h3>
+            <p class="story-subtitle">Updates for OS 8 and Early Access</p>
+            <div class="author-info">
+              <div class="author-avatar"></div>
+              <div class="author-details">
+                <div class="author-name">Danielle Foré</div>
+                <div class="post-meta">Wed, Jul 2, 2025 · 7 min read</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="story-card">
+          <div class="story-image gradient-bg-2">
+            <svg width="200" height="200" viewBox="0 0 100 100" fill="none">
+              <circle cx="50" cy="50" r="35" stroke="white" stroke-width="4" />
+              <path
+                d="M30 50 Q45 35, 55 50 Q65 65, 70 50"
+                stroke="white"
+                stroke-width="4"
+                fill="none"
+              />
+            </svg>
+          </div>
+          <div class="story-content">
+            <h3 class="story-title">
+              The First Pride Was a Riot, and So Are These Updates
+            </h3>
+            <p class="story-subtitle">New bug fixes and features for OS 8</p>
+            <div class="author-info">
+              <div class="author-avatar"></div>
+              <div class="author-details">
+                <div class="author-name">Danielle Foré</div>
+                <div class="post-meta">Mon, Jun 2, 2025 · 4 min read</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="story-card">
+          <div class="story-image">
+            <div
+              style="
+                background: white;
+                border-radius: 8px;
+                padding: 20px;
+                width: 90%;
+              "
+            >
+              <div style="margin-bottom: 15px">
+                <div style="font-size: 24px; font-weight: 700; color: #333">
+                  15%
+                </div>
+                <div
+                  style="
+                    display: flex;
+                    gap: 8px;
+                    font-size: 10px;
+                    color: #666;
+                    margin-top: 5px;
+                  "
+                >
+                  <span>16%</span><span>20%</span><span>7%</span
+                  ><span>12%</span>
+                </div>
+                <div
+                  style="display: flex; gap: 8px; font-size: 10px; color: #666"
+                >
+                  <span>12%</span><span>8%</span><span>16%</span
+                  ><span>22%</span>
+                </div>
+                <div style="height: 50px; margin-top: 10px; position: relative">
+                  <svg width="100%" height="100%">
+                    <line
+                      x1="0"
+                      y1="25"
+                      x2="100%"
+                      y2="25"
+                      stroke="#e0e0e0"
+                      stroke-width="1"
+                    />
+                    <polyline
+                      points="0,35 25,30 50,28 75,32 100,25"
+                      fill="none"
+                      stroke="#ffc107"
+                      stroke-width="2"
+                    />
+                    <polyline
+                      points="0,25 25,22 50,20 75,24 100,18"
+                      fill="none"
+                      stroke="#ff6b6b"
+                      stroke-width="2"
+                    />
+                    <polyline
+                      points="0,40 25,38 50,35 75,37 100,30"
+                      fill="none"
+                      stroke="#4ecdc4"
+                      stroke-width="2"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div
+                style="
+                  background: #f5f5f5;
+                  border-radius: 4px;
+                  padding: 12px;
+                  margin-bottom: 10px;
+                "
+              >
+                <div
+                  style="
+                    font-size: 11px;
+                    font-weight: 600;
+                    color: #333;
+                    margin-bottom: 5px;
+                  "
+                >
+                  Memory
+                </div>
+                <div
+                  style="
+                    display: grid;
+                    grid-template-columns: repeat(3, 1fr);
+                    gap: 8px;
+                    font-size: 9px;
+                    color: #666;
+                    margin-bottom: 8px;
+                  "
+                >
+                  <div>
+                    <div>USED</div>
+                    <div style="font-weight: 600; color: #333">55%</div>
+                    <div>8.4 GiB</div>
+                  </div>
+                  <div>
+                    <div>SHARED</div>
+                    <div style="font-weight: 600; color: #333">3.3 GiB</div>
+                    <div>116.5 MiB</div>
+                  </div>
+                  <div>
+                    <div>CACHED</div>
+                    <div style="font-weight: 600; color: #333">6.6 GiB</div>
+                    <div>0 bytes</div>
+                  </div>
+                </div>
+                <div
+                  style="
+                    height: 20px;
+                    background: linear-gradient(
+                      to right,
+                      #c6f4d6 55%,
+                      #f5f5f5 55%
+                    );
+                    border-radius: 3px;
+                  "
+                ></div>
+              </div>
+              <div
+                style="background: #e8f5e9; border-radius: 4px; padding: 12px"
+              >
+                <div
+                  style="
+                    font-size: 11px;
+                    font-weight: 600;
+                    color: #333;
+                    margin-bottom: 5px;
+                  "
+                >
+                  Network
+                </div>
+                <div style="display: flex; gap: 8px; margin-bottom: 8px">
+                  <span
+                    style="
+                      background: #64baff;
+                      color: white;
+                      padding: 2px 6px;
+                      border-radius: 3px;
+                      font-size: 9px;
+                    "
+                    >1.2 KiB/s</span
+                  >
+                  <span
+                    style="
+                      background: #68b723;
+                      color: white;
+                      padding: 2px 6px;
+                      border-radius: 3px;
+                      font-size: 9px;
+                    "
+                    >3.3 bytes/s</span
+                  >
+                </div>
+              </div>
+              <div
+                style="
+                  background: #e8f5e9;
+                  border-radius: 4px;
+                  padding: 8px;
+                  margin-top: 8px;
+                  text-align: right;
+                "
+              >
+                <div style="font-size: 11px; font-weight: 600; color: #333">
+                  TEMPERATURE
+                </div>
+                <div style="font-size: 18px; font-weight: 700; color: #333">
+                  85.00°C
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="story-content">
+            <h3 class="story-title">A Little Bit Now, A Lotta Bit Later</h3>
+            <p class="story-subtitle">Updates for OS 8 and Early Access</p>
+            <div class="author-info">
+              <div class="author-avatar"></div>
+              <div class="author-details">
+                <div class="author-name">Danielle Foré</div>
+                <div class="post-meta">Tue, May 6, 2025 · 7 min read</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pagination -->
+    <div class="pagination">
+      <a href="#">Older →</a>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-content">
+        <h3 class="footer-title">Looking for More?</h3>
+        <p class="footer-text">
+          While we're migrating posts to the elementary blog, some older stories
+          are still only on the
+          <a href="#" class="footer-link"
+            >official elementary Medium publication</a
+          >. Head over there to read more.
+        </p>
+        <div class="footer-bottom">
+          <div>© 2025 elementary, Inc.</div>
+          <div class="footer-links">
+            <a href="#">Press</a>
+            <a href="#">Brand</a>
+            <a href="#">OEMs</a>
+            <a href="#">Privacy</a>
+            <a href="#">Team</a>
+            <a href="#">Open Source</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
