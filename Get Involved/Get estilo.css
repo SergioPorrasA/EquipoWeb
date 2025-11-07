@@ -8,6 +8,35 @@
     box-sizing: border-box;
 }
 
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem; 
+    background: transparent;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+    gap: 3rem;
+}
+nav ul li a {
+    color: black;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.5s;
+    padding: 8px 10px;
+
+}
+nav ul li a.active,
+nav ul li a:hover {
+    padding: 8px 10px;
+    color: rgb(255, 254, 254);
+}
+
 html,
 body {
     background-color: #f2f2f2;
