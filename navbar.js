@@ -1,7 +1,8 @@
 // Navbar Component
 class Navbar {
-  constructor(basePath = '.') {
+  constructor(basePath = '.', mode = 'auto') {
     this.basePath = basePath;
+    this.mode = mode;
   }
 
   getLogoSVG() {
@@ -10,7 +11,26 @@ class Navbar {
     </svg>`;
   }
 
-  render() {
+  renderStoreStyle() {
+    // Para blog y store (usan clases .logo y .top-nav-links)
+    const container = document.createElement('div');
+    container.innerHTML = `
+      <a href="${this.basePath}/index.html" class="logo">
+        ${this.getLogoSVG()}
+      </a>
+      <ul class="top-nav-links">
+        <li><a href="${this.basePath}/soporte/diseno.html">Soporte</a></li>
+        <li><a href="${this.basePath}/desarrollo/index.html" target="_self">Desarrollar</a></li>
+        <li><a href="${this.basePath}/Get Involved/Get html.html">Participa</a></li>
+        <li><a href="${this.basePath}/store/store.html" target="_self">Tienda</a></li>
+        <li><a href="${this.basePath}/blog/blog.html" target="_self">Blog</a></li>
+      </ul>
+    `;
+    return container;
+  }
+
+  renderDefaultStyle() {
+    // Para index.html y otras páginas (usan nav > ul > li)
     const nav = document.createElement('nav');
     nav.innerHTML = `
       <ul>
@@ -29,10 +49,20 @@ class Navbar {
     return nav;
   }
 
+  render(target) {
+    // Auto-detectar el modo basado en el contenedor padre
+    if (this.mode === 'auto' && target) {
+      const hasTopNavContent = target.classList.contains('top-nav-content');
+      return hasTopNavContent ? this.renderStoreStyle() : this.renderDefaultStyle();
+    }
+
+    return this.mode === 'store' ? this.renderStoreStyle() : this.renderDefaultStyle();
+  }
+
   mount(selector) {
     const container = document.querySelector(selector);
     if (container) {
-      container.appendChild(this.render());
+      container.appendChild(this.render(container));
     }
   }
 }
@@ -43,6 +73,6 @@ document.addEventListener('DOMContentLoaded', () => {
   navbarElements.forEach(element => {
     const basePath = element.getAttribute('data-navbar') || '.';
     const navbar = new Navbar(basePath);
-    element.appendChild(navbar.render());
+    element.appendChild(navbar.render(element));
   });
 });
